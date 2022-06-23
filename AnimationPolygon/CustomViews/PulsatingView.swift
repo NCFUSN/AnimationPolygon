@@ -46,11 +46,11 @@ class PulsatingView: UIView {
     
     func scaleAnimation() -> CABasicAnimation {
         let scaling = CABasicAnimation(keyPath: "transform.scale")
-                scaling.toValue = 1
+        scaling.toValue = 1
         scaling.duration = 0.3
-//                scaling.autoreverses = true
-//                scaling.repeatCount = .infinity
-                layer.add(scaling, forKey: nil)
+        scaling.autoreverses = true
+        scaling.repeatCount = .infinity
+        layer.add(scaling, forKey: nil)
         return scaling
     }
     
