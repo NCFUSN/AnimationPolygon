@@ -1,24 +1,649 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h8v-0I-BZU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fh9-Rl-zae"/>
+                        <viewControllerLayoutGuide type="bottom" id="jBZ-NQ-pEt"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-S3-XeG">
+                                <rect key="frame" x="123" y="293" width="168.5" height="310"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txo-Xn-GDc">
+                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Logo Drawing"/>
+                                        <connections>
+                                            <segue destination="AhX-Q9-rsF" kind="push" id="Rh8-gA-TRe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-Dr-D5r">
+                                        <rect key="frame" x="0.0" y="31" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Thermometer"/>
+                                        <connections>
+                                            <segue destination="pvw-ki-hgd" kind="push" id="kJb-Ln-NBq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-Sa-aKz" userLabel="BudjetMeter">
+                                        <rect key="frame" x="0.0" y="62" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="BudjetMeter"/>
+                                        <connections>
+                                            <segue destination="hN6-SP-Gr9" kind="show" id="ZV2-zh-t3F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9p-Ev-ZrX" userLabel="Login">
+                                        <rect key="frame" x="0.0" y="93" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <connections>
+                                            <segue destination="9AT-Dk-a7a" kind="show" id="8TU-Ov-k60"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khF-e9-e3E" userLabel="RatingControl">
+                                        <rect key="frame" x="0.0" y="124" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RatingControl"/>
+                                        <connections>
+                                            <segue destination="idW-WY-ecK" kind="show" id="eQ5-1V-2ky"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1j-af-SqQ">
+                                        <rect key="frame" x="0.0" y="155" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CakeView"/>
+                                        <connections>
+                                            <segue destination="TNq-AN-KpB" kind="show" id="cmT-uX-huC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-il-uLT">
+                                        <rect key="frame" x="0.0" y="186" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Clock"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-kI-OVn" userLabel="ShieldControl">
+                                        <rect key="frame" x="0.0" y="217" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ShieldControl"/>
+                                        <connections>
+                                            <segue destination="HfI-Ka-Pdp" kind="show" id="pk7-xz-atR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-Ey-juB" userLabel="Constraints Animation">
+                                        <rect key="frame" x="0.0" y="248" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Autolayout Animations"/>
+                                        <connections>
+                                            <segue destination="pku-WL-mYz" kind="show" id="2RB-dF-29s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-NR-o7J">
+                                        <rect key="frame" x="0.0" y="279" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Line Animations"/>
+                                        <connections>
+                                            <segue destination="RR1-c3-twz" kind="show" id="d4F-i9-gUB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npq-zx-LPf" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="182" y="165" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="D25-s4-psb"/>
+                                    <constraint firstAttribute="height" constant="50" id="ogO-5n-37b"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                        <color key="value" red="0.87450980389999999" green="0.1286219358" blue="0.20344987510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="roundedButtonDidPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LD6-6U-MB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O7z-S3-XeG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lwI-ed-5iX"/>
+                            <constraint firstItem="npq-zx-LPf" firstAttribute="top" secondItem="fh9-Rl-zae" secondAttribute="bottom" constant="77" id="nep-1d-yKQ"/>
+                            <constraint firstItem="npq-zx-LPf" firstAttribute="centerX" secondItem="O7z-S3-XeG" secondAttribute="centerX" id="p1f-kF-ZM7"/>
+                            <constraint firstItem="O7z-S3-XeG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sg2-jm-2LL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="o5b-oU-PT1"/>
+                    <connections>
+                        <outlet property="btnRounded" destination="npq-zx-LPf" id="Nq0-Ij-IrK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+        </scene>
+        <!--Thermometer View Controller-->
+        <scene sceneID="P3t-ue-qST">
+            <objects>
+                <viewController id="pvw-ki-hgd" customClass="ThermometerViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SSn-xx-ZqH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dr6-pj-cVI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNO-Vv-8DU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEr-W1-aHd" customClass="ThermometerView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="87" y="232" width="240" height="432"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="432" id="N1p-Sl-EN1"/>
+                                    <constraint firstAttribute="width" constant="240" id="lTr-Kx-I37"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="level">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KEr-W1-aHd" firstAttribute="centerX" secondItem="CNO-Vv-8DU" secondAttribute="centerX" id="Rzk-Co-Mkc"/>
+                            <constraint firstItem="KEr-W1-aHd" firstAttribute="centerY" secondItem="CNO-Vv-8DU" secondAttribute="centerY" id="wIV-xD-upb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fkK-8K-PWm"/>
+                    <connections>
+                        <outlet property="thermometerView" destination="KEr-W1-aHd" id="hwD-GP-0N0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxO-tj-zse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.1159420289857" y="92.410714285714278"/>
+        </scene>
+        <!--Budjet View Controller-->
+        <scene sceneID="jNM-in-w6S">
+            <objects>
+                <viewController id="hN6-SP-Gr9" customClass="BudjetViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9nm-Ui-Xz7"/>
+                        <viewControllerLayoutGuide type="bottom" id="HU7-V0-8Ia"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dt9-tJ-6oc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNp-0h-LLL" customClass="BudgetControl" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="48" y="369" width="318" height="158"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lNp-0h-LLL" firstAttribute="leading" secondItem="Dt9-tJ-6oc" secondAttribute="leadingMargin" constant="28" id="OrZ-0C-GCo"/>
+                            <constraint firstItem="lNp-0h-LLL" firstAttribute="centerX" secondItem="Dt9-tJ-6oc" secondAttribute="centerX" id="bde-9b-b7k"/>
+                            <constraint firstItem="lNp-0h-LLL" firstAttribute="top" secondItem="9nm-Ui-Xz7" secondAttribute="bottom" constant="281" id="gvp-ek-6aB"/>
+                            <constraint firstItem="lNp-0h-LLL" firstAttribute="centerY" secondItem="Dt9-tJ-6oc" secondAttribute="centerY" id="tXb-ZX-OUl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PMn-vz-DVi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRm-9s-PQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673.913043478261" y="101.78571428571428"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="4dv-Md-lwq">
+            <objects>
+                <viewController id="9AT-Dk-a7a" customClass="LoginViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qg8-oA-JQu"/>
+                        <viewControllerLayoutGuide type="bottom" id="e3U-QS-iWs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xTU-6G-4MA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkK-hZ-DFz" customClass="LoginView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="87" y="242" width="240" height="413"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dkK-hZ-DFz" firstAttribute="leading" secondItem="xTU-6G-4MA" secondAttribute="leadingMargin" constant="67" id="CvZ-Lr-HBi"/>
+                            <constraint firstItem="dkK-hZ-DFz" firstAttribute="centerX" secondItem="xTU-6G-4MA" secondAttribute="centerX" id="c4o-sg-JR1"/>
+                            <constraint firstItem="dkK-hZ-DFz" firstAttribute="centerY" secondItem="xTU-6G-4MA" secondAttribute="centerY" constant="0.5" id="hTM-F1-H4I"/>
+                            <constraint firstItem="dkK-hZ-DFz" firstAttribute="top" secondItem="qg8-oA-JQu" secondAttribute="bottom" constant="154" id="xRF-jj-dUI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pqv-8r-Sgu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pH8-pH-mcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3434.7826086956525" y="113.83928571428571"/>
+        </scene>
+        <!--Rating View Controller-->
+        <scene sceneID="df5-XU-kXa">
+            <objects>
+                <viewController id="idW-WY-ecK" customClass="RatingViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="goG-fe-yt7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QiA-TK-53x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y69-ZU-wnF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-c2-pVk" customClass="RatingView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nVL-c2-pVk" firstAttribute="centerX" secondItem="y69-ZU-wnF" secondAttribute="centerX" id="OG8-bH-4jC"/>
+                            <constraint firstItem="nVL-c2-pVk" firstAttribute="leading" secondItem="y69-ZU-wnF" secondAttribute="leadingMargin" constant="67" id="YDg-UZ-v4f"/>
+                            <constraint firstItem="nVL-c2-pVk" firstAttribute="centerY" secondItem="y69-ZU-wnF" secondAttribute="centerY" id="bIf-iu-cNU"/>
+                            <constraint firstItem="nVL-c2-pVk" firstAttribute="top" secondItem="goG-fe-yt7" secondAttribute="bottom" constant="240" id="nFN-AS-0Ee"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vue-l3-8bj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSV-sD-yXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4173.913043478261" y="122.54464285714285"/>
+        </scene>
+        <!--Shield View Controller-->
+        <scene sceneID="vAu-6O-B1B">
+            <objects>
+                <viewController id="HfI-Ka-Pdp" customClass="ShieldViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pX7-JV-HdO"/>
+                        <viewControllerLayoutGuide type="bottom" id="JOo-Zm-dj8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4fh-XI-CCi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-ea-nUG" customClass="ShieldControl" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="beE-ea-nUG" secondAttribute="trailing" id="dkL-b3-ul1"/>
+                            <constraint firstItem="beE-ea-nUG" firstAttribute="top" secondItem="pX7-JV-HdO" secondAttribute="bottom" id="tSe-m4-0sE"/>
+                            <constraint firstItem="beE-ea-nUG" firstAttribute="leading" secondItem="4fh-XI-CCi" secondAttribute="leading" id="tg3-Pd-fUR"/>
+                            <constraint firstItem="JOo-Zm-dj8" firstAttribute="top" secondItem="beE-ea-nUG" secondAttribute="bottom" id="ycc-qu-9fu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U0l-EI-cDZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khv-rn-myI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4915.9420289855079" y="133.92857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YtC-Rl-acA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8v-0I-BZU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aWP-j7-5Iq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XJY-Rf-ien"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAd-1Y-hM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZBa-Sn-VqN">
+            <objects>
+                <viewController id="TNq-AN-KpB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ahW-IG-6SZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Kq-AI-2It"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GNu-L9-2oJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-Ms-7BF" customClass="CakeView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="01z-Jp-8gI"/>
+                                    <constraint firstAttribute="width" constant="240" id="7ap-sr-KND"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BoQ-Ms-7BF" firstAttribute="centerY" secondItem="GNu-L9-2oJ" secondAttribute="centerY" id="4c4-2c-lit"/>
+                            <constraint firstItem="BoQ-Ms-7BF" firstAttribute="centerX" secondItem="GNu-L9-2oJ" secondAttribute="centerX" id="rSc-yy-zlS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xKE-tz-wsI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWh-ep-eBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801.44927536231887" y="799.55357142857144"/>
+        </scene>
+        <!--Logo View Controller-->
+        <scene sceneID="4l0-Fu-kBE">
+            <objects>
+                <viewController id="AhX-Q9-rsF" customClass="LogoViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dxr-bC-SGU"/>
+                        <viewControllerLayoutGuide type="bottom" id="WxT-lZ-0r5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7CS-Tf-7SG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZo-UB-v3g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXF-u8-MsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="800"/>
+        </scene>
+        <!--Constraints Animation View Controller-->
+        <scene sceneID="djs-nW-1de">
+            <objects>
+                <viewController id="pku-WL-mYz" customClass="ConstraintsAnimationViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zfw-MQ-MfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YpD-z2-GzY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eJF-yY-NdW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrf-EQ-zrX" customClass="CakeView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="324" y="96" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IJh-oH-2cL"/>
+                                    <constraint firstAttribute="height" constant="50" id="R3z-mj-tJ2"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P1w-DC-QLg">
+                                <rect key="frame" x="10" y="713" width="394" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKH-wl-VkO">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Rotate Drawing"/>
+                                        <connections>
+                                            <action selector="animate" destination="pku-WL-mYz" eventType="touchUpInside" id="Mw1-hD-b3Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIK-U9-dMX" userLabel="Show Pants">
+                                        <rect key="frame" x="0.0" y="31" width="394" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Pants"/>
+                                        <connections>
+                                            <action selector="dropPants" destination="pku-WL-mYz" eventType="touchUpInside" id="yRI-Kb-AK1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1V-ks-GaA">
+                                        <rect key="frame" x="0.0" y="62" width="394" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SpringAnimation"/>
+                                        <connections>
+                                            <action selector="showSpringNimation" destination="pku-WL-mYz" eventType="touchUpInside" id="NaA-eZ-lOg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-jm-4BD">
+                                        <rect key="frame" x="0.0" y="93" width="394" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Move Round Button"/>
+                                        <connections>
+                                            <action selector="moveRoundButton" destination="pku-WL-mYz" eventType="touchUpInside" id="be0-Ei-hH2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgS-C7-gyD" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="98" y="136" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                        <color key="value" red="0.87450980389999999" green="0.12941176469999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mrf-EQ-zrX" firstAttribute="top" secondItem="zfw-MQ-MfZ" secondAttribute="bottom" constant="8" symbolic="YES" id="ATW-Il-6JT"/>
+                            <constraint firstItem="P1w-DC-QLg" firstAttribute="centerX" secondItem="eJF-yY-NdW" secondAttribute="centerX" id="nXx-4t-iO9"/>
+                            <constraint firstItem="P1w-DC-QLg" firstAttribute="leading" secondItem="eJF-yY-NdW" secondAttribute="leading" constant="10" id="pA0-di-fM1"/>
+                            <constraint firstItem="mrf-EQ-zrX" firstAttribute="trailing" secondItem="eJF-yY-NdW" secondAttribute="trailingMargin" constant="-20" id="pcJ-Oz-aRh"/>
+                            <constraint firstItem="YpD-z2-GzY" firstAttribute="top" secondItem="P1w-DC-QLg" secondAttribute="bottom" constant="25" id="xCF-Jb-iEm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sH9-NQ-BhN"/>
+                    <connections>
+                        <outlet property="btn" destination="FgS-C7-gyD" id="84j-8a-UsP"/>
+                        <outlet property="theview" destination="mrf-EQ-zrX" id="ZWg-JG-VAh"/>
+                        <outlet property="trailingConstraint" destination="pcJ-Oz-aRh" id="Gt5-b4-fv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbk-4d-Ljk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="791"/>
+        </scene>
+        <!--Line Animations View Controller-->
+        <scene sceneID="Ahh-6o-Gp6">
+            <objects>
+                <viewController id="RR1-c3-twz" customClass="LineAnimationsViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ta4-Pu-liT"/>
+                        <viewControllerLayoutGuide type="bottom" id="45k-p7-ekg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b1l-mv-Rcs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-Ys-Lim">
+                                <rect key="frame" x="39.5" y="802" width="335" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29u-kH-1qi" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="knz-vs-Hn0"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                                <color key="value" red="0.87450980389999999" green="0.12941176469999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressButtonWithSender:" destination="RR1-c3-twz" eventType="touchUpInside" id="NOB-1x-7zp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ijg-zO-Jrd" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                        <rect key="frame" x="95" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="d6h-j3-4dU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                                <color key="value" systemColor="systemIndigoColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressButtonWithSender:" destination="RR1-c3-twz" eventType="touchUpInside" id="bnX-Az-J5S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKd-Il-5Tm" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                        <rect key="frame" x="190" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="4Oo-mD-0pW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                                <color key="value" systemColor="systemOrangeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressButtonWithSender:" destination="RR1-c3-twz" eventType="touchUpInside" id="pOP-WS-nsG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-Zx-qjR" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                        <rect key="frame" x="285" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="edh-9M-GHL"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                                <color key="value" systemColor="systemPinkColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressButtonWithSender:" destination="RR1-c3-twz" eventType="touchUpInside" id="QSL-Ci-BT0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rpd-FZ-P3x"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXa-6b-Ih8" customClass="PulsatingView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="jX8-UT-t8S"/>
+                                    <constraint firstAttribute="height" constant="20" id="joG-An-VBY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                        <color key="value" red="0.6588235294" green="0.0" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CXa-6b-Ih8" firstAttribute="centerY" secondItem="b1l-mv-Rcs" secondAttribute="centerY" id="B9r-QY-Z5M"/>
+                            <constraint firstItem="oPx-Ys-Lim" firstAttribute="centerX" secondItem="b1l-mv-Rcs" secondAttribute="centerX" id="BGD-7B-4oO"/>
+                            <constraint firstItem="45k-p7-ekg" firstAttribute="top" secondItem="oPx-Ys-Lim" secondAttribute="bottom" constant="10" id="TM6-CY-9Yp"/>
+                            <constraint firstItem="CXa-6b-Ih8" firstAttribute="centerX" secondItem="b1l-mv-Rcs" secondAttribute="centerX" id="ubz-CD-Jat"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2SV-Wf-81a"/>
+                    <connections>
+                        <outlet property="btn1" destination="29u-kH-1qi" id="wfq-Gc-7X4"/>
+                        <outlet property="btn2" destination="Ijg-zO-Jrd" id="peV-Ph-amC"/>
+                        <outlet property="btn3" destination="OKd-Il-5Tm" id="CCE-kc-6Jz"/>
+                        <outlet property="btn4" destination="uBi-Zx-qjR" id="IAc-lb-15D"/>
+                        <outlet property="stv" destination="oPx-Ys-Lim" id="AuT-Cm-sm8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2G-rW-ZAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3483" y="811"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="29u-kH-1qi">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="FgS-C7-gyD">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="Ijg-zO-Jrd">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="OKd-Il-5Tm">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="npq-zx-LPf">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="uBi-Zx-qjR">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

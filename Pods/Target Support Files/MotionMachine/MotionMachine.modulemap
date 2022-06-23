@@ -1,0 +1,6 @@
+framework module MotionMachine {
+  umbrella header "MotionMachine-umbrella.h"
+
+  export *
+  module * { export * }
+}

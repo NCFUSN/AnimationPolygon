@@ -7,15 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF60060228560B9000D43DEE /* RoundedCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60060128560B9000D43DEE /* RoundedCloseButton.swift */; };
+		AF600604285614B500D43DEE /* CakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF600603285614B500D43DEE /* CakeViewController.swift */; };
+		AF6006062856157C00D43DEE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6006052856157C00D43DEE /* RatingView.swift */; };
+		AF60060828561C2D00D43DEE /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60060728561C2D00D43DEE /* Drawing.swift */; };
 		AF9874B62848AC33002DC4BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9874B52848AC33002DC4BE /* AppDelegate.swift */; };
 		AF9874B82848AC33002DC4BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9874B72848AC33002DC4BE /* SceneDelegate.swift */; };
 		AF9874BA2848AC33002DC4BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9874B92848AC33002DC4BE /* ViewController.swift */; };
 		AF9874BD2848AC33002DC4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9874BB2848AC33002DC4BE /* Main.storyboard */; };
 		AF9874BF2848AC34002DC4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9874BE2848AC34002DC4BE /* Assets.xcassets */; };
 		AF9874C22848AC34002DC4BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9874C02848AC34002DC4BE /* LaunchScreen.storyboard */; };
+		AF9874CB284E5A26002DC4BE /* CustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9874CA284E5A26002DC4BE /* CustomTab.swift */; };
+		AF9B95A3284F576100061404 /* MockSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95A2284F576100061404 /* MockSize.swift */; };
+		AF9B95A5284F604F00061404 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9B95A4284F604F00061404 /* Media.xcassets */; };
+		AF9B95A928521A9500061404 /* ThermometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95A828521A9500061404 /* ThermometerView.swift */; };
+		AF9B95AC28523E4100061404 /* BudjetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95AB28523E4100061404 /* BudjetControl.swift */; };
+		AF9B95AF28523F5C00061404 /* ThermometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95AE28523F5C00061404 /* ThermometerViewController.swift */; };
+		AF9B95B12852405F00061404 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95B02852405F00061404 /* LogoViewController.swift */; };
+		AF9B95B32852447400061404 /* BudjetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95B22852447400061404 /* BudjetViewController.swift */; };
+		AF9B95B52855C91B00061404 /* LoginControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95B42855C91B00061404 /* LoginControl.swift */; };
+		AF9B95B72855CA5500061404 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95B62855CA5500061404 /* GlobalFunctions.swift */; };
+		AF9B95B92855CEE200061404 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95B82855CEE200061404 /* LoginViewController.swift */; };
+		AF9B95BB2855FF7A00061404 /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95BA2855FF7A00061404 /* CakeView.swift */; };
+		AF9B95BD285600B100061404 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B95BC285600B100061404 /* RatingViewController.swift */; };
+		AFB115A4284E5AA6008B25E5 /* CustomTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB115A3284E5AA6008B25E5 /* CustomTab.xib */; };
+		AFB115A6284F383F008B25E5 /* CustomTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB115A5284F383F008B25E5 /* CustomTabViewModel.swift */; };
+		AFB115A8284F3B08008B25E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB115A7284F3B08008B25E5 /* Extensions.swift */; };
+		AFBDAC612856306E00254800 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC602856306E00254800 /* ClockViewController.swift */; };
+		AFBDAC632856309100254800 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC622856309100254800 /* ClockView.swift */; };
+		AFBDAC6528572AC900254800 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC6428572AC900254800 /* Graph.swift */; };
+		AFBDAC6728574DF300254800 /* ShieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC6628574DF300254800 /* ShieldControl.swift */; };
+		AFBDAC69285750D700254800 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC68285750D700254800 /* Utils.swift */; };
+		AFBDAC6C2857511D00254800 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC6A2857511D00254800 /* CGRect+Extensions.swift */; };
+		AFBDAC6D2857511D00254800 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC6B2857511D00254800 /* CGSize+Extensions.swift */; };
+		AFBDAC6F285752A400254800 /* ShieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC6E285752A400254800 /* ShieldViewController.swift */; };
+		AFBDAC7128576C3500254800 /* PseudoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC7028576C3500254800 /* PseudoConnection.swift */; };
+		AFBDAC73285EE95B00254800 /* ConstraintsAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC72285EE95B00254800 /* ConstraintsAnimationViewController.swift */; };
+		AFBDAC792860872400254800 /* LineAnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC782860872400254800 /* LineAnimationsViewController.swift */; };
+		AFBDAC7B2860CA4900254800 /* PulsatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDAC7A2860CA4900254800 /* PulsatingButton.swift */; };
+		AFEA15BE28644C6500FE8A2A /* PulsatingDotAnimatedLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA15BD28644C6500FE8A2A /* PulsatingDotAnimatedLayer.swift */; };
+		AFEA15C72864A90400FE8A2A /* PulsatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA15C62864A90400FE8A2A /* PulsatingView.swift */; };
+		DEAD9D539BDDC3A910B5635E /* Pods_AnimationPolygon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37929977711E42F4C19F08D9 /* Pods_AnimationPolygon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37929977711E42F4C19F08D9 /* Pods_AnimationPolygon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationPolygon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C993E6A1AC649E3ED37521 /* Pods-AnimationPolygon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationPolygon.debug.xcconfig"; path = "Target Support Files/Pods-AnimationPolygon/Pods-AnimationPolygon.debug.xcconfig"; sourceTree = "<group>"; };
+		AF60060128560B9000D43DEE /* RoundedCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCloseButton.swift; sourceTree = "<group>"; };
+		AF600603285614B500D43DEE /* CakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeViewController.swift; sourceTree = "<group>"; };
+		AF6006052856157C00D43DEE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		AF60060728561C2D00D43DEE /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		AF9874B22848AC32002DC4BE /* AnimationPolygon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationPolygon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9874B52848AC33002DC4BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9874B72848AC33002DC4BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +65,37 @@
 		AF9874BE2848AC34002DC4BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9874C12848AC34002DC4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9874C32848AC34002DC4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF9874CA284E5A26002DC4BE /* CustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTab.swift; sourceTree = "<group>"; };
+		AF9B95A2284F576100061404 /* MockSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSize.swift; sourceTree = "<group>"; };
+		AF9B95A4284F604F00061404 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		AF9B95A828521A9500061404 /* ThermometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerView.swift; sourceTree = "<group>"; };
+		AF9B95AB28523E4100061404 /* BudjetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudjetControl.swift; sourceTree = "<group>"; };
+		AF9B95AE28523F5C00061404 /* ThermometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerViewController.swift; sourceTree = "<group>"; };
+		AF9B95B02852405F00061404 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		AF9B95B22852447400061404 /* BudjetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudjetViewController.swift; sourceTree = "<group>"; };
+		AF9B95B42855C91B00061404 /* LoginControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControl.swift; sourceTree = "<group>"; };
+		AF9B95B62855CA5500061404 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		AF9B95B82855CEE200061404 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AF9B95BA2855FF7A00061404 /* CakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeView.swift; sourceTree = "<group>"; };
+		AF9B95BC285600B100061404 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		AFB115A3284E5AA6008B25E5 /* CustomTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTab.xib; sourceTree = "<group>"; };
+		AFB115A5284F383F008B25E5 /* CustomTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewModel.swift; sourceTree = "<group>"; };
+		AFB115A7284F3B08008B25E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AFBDAC602856306E00254800 /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		AFBDAC622856309100254800 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		AFBDAC6428572AC900254800 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		AFBDAC6628574DF300254800 /* ShieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldControl.swift; sourceTree = "<group>"; };
+		AFBDAC68285750D700254800 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AFBDAC6A2857511D00254800 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		AFBDAC6B2857511D00254800 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
+		AFBDAC6E285752A400254800 /* ShieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldViewController.swift; sourceTree = "<group>"; };
+		AFBDAC7028576C3500254800 /* PseudoConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoConnection.swift; sourceTree = "<group>"; };
+		AFBDAC72285EE95B00254800 /* ConstraintsAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsAnimationViewController.swift; sourceTree = "<group>"; };
+		AFBDAC782860872400254800 /* LineAnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineAnimationsViewController.swift; sourceTree = "<group>"; };
+		AFBDAC7A2860CA4900254800 /* PulsatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatingButton.swift; sourceTree = "<group>"; };
+		AFEA15BD28644C6500FE8A2A /* PulsatingDotAnimatedLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatingDotAnimatedLayer.swift; sourceTree = "<group>"; };
+		AFEA15C62864A90400FE8A2A /* PulsatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatingView.swift; sourceTree = "<group>"; };
+		B7D9F16E7059BB268810F47C /* Pods-AnimationPolygon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationPolygon.release.xcconfig"; path = "Target Support Files/Pods-AnimationPolygon/Pods-AnimationPolygon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +103,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAD9D539BDDC3A910B5635E /* Pods_AnimationPolygon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105187B99FEFBC935FA906C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37929977711E42F4C19F08D9 /* Pods_AnimationPolygon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF9874A92848AC32002DC4BE = {
 			isa = PBXGroup;
 			children = (
 				AF9874B42848AC33002DC4BE /* AnimationPolygon */,
 				AF9874B32848AC32002DC4BE /* Products */,
+				DDD6FE90DAAEB8BD95CD37AF /* Pods */,
+				105187B99FEFBC935FA906C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +139,82 @@
 		AF9874B42848AC33002DC4BE /* AnimationPolygon */ = {
 			isa = PBXGroup;
 			children = (
+				AFBDAC6A2857511D00254800 /* CGRect+Extensions.swift */,
+				AFBDAC6B2857511D00254800 /* CGSize+Extensions.swift */,
+				AFBDAC7028576C3500254800 /* PseudoConnection.swift */,
+				AF9B95B62855CA5500061404 /* GlobalFunctions.swift */,
+				AF9B95AD28523F2A00061404 /* Controllers */,
+				AF9B95AA285229F600061404 /* CustomViews */,
+				AF9874C9284E5A08002DC4BE /* CustomTab */,
 				AF9874B52848AC33002DC4BE /* AppDelegate.swift */,
 				AF9874B72848AC33002DC4BE /* SceneDelegate.swift */,
+				AFB115A7284F3B08008B25E5 /* Extensions.swift */,
 				AF9874B92848AC33002DC4BE /* ViewController.swift */,
+				AF9B95A2284F576100061404 /* MockSize.swift */,
 				AF9874BB2848AC33002DC4BE /* Main.storyboard */,
 				AF9874BE2848AC34002DC4BE /* Assets.xcassets */,
 				AF9874C02848AC34002DC4BE /* LaunchScreen.storyboard */,
 				AF9874C32848AC34002DC4BE /* Info.plist */,
+				AFBDAC68285750D700254800 /* Utils.swift */,
 			);
 			path = AnimationPolygon;
+			sourceTree = "<group>";
+		};
+		AF9874C9284E5A08002DC4BE /* CustomTab */ = {
+			isa = PBXGroup;
+			children = (
+				AF9874CA284E5A26002DC4BE /* CustomTab.swift */,
+				AFB115A3284E5AA6008B25E5 /* CustomTab.xib */,
+				AFB115A5284F383F008B25E5 /* CustomTabViewModel.swift */,
+				AF9B95A4284F604F00061404 /* Media.xcassets */,
+			);
+			path = CustomTab;
+			sourceTree = "<group>";
+		};
+		AF9B95AA285229F600061404 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AFEA15BD28644C6500FE8A2A /* PulsatingDotAnimatedLayer.swift */,
+				AF60060728561C2D00D43DEE /* Drawing.swift */,
+				AF9B95A828521A9500061404 /* ThermometerView.swift */,
+				AF9B95AB28523E4100061404 /* BudjetControl.swift */,
+				AF9B95B42855C91B00061404 /* LoginControl.swift */,
+				AF9B95BA2855FF7A00061404 /* CakeView.swift */,
+				AF60060128560B9000D43DEE /* RoundedCloseButton.swift */,
+				AF6006052856157C00D43DEE /* RatingView.swift */,
+				AFBDAC622856309100254800 /* ClockView.swift */,
+				AFBDAC6428572AC900254800 /* Graph.swift */,
+				AFBDAC6628574DF300254800 /* ShieldControl.swift */,
+				AFBDAC7A2860CA4900254800 /* PulsatingButton.swift */,
+				AFEA15C62864A90400FE8A2A /* PulsatingView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		AF9B95AD28523F2A00061404 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF9B95AE28523F5C00061404 /* ThermometerViewController.swift */,
+				AF9B95B02852405F00061404 /* LogoViewController.swift */,
+				AF9B95B22852447400061404 /* BudjetViewController.swift */,
+				AF9B95B82855CEE200061404 /* LoginViewController.swift */,
+				AF9B95BC285600B100061404 /* RatingViewController.swift */,
+				AF600603285614B500D43DEE /* CakeViewController.swift */,
+				AFBDAC602856306E00254800 /* ClockViewController.swift */,
+				AFBDAC6E285752A400254800 /* ShieldViewController.swift */,
+				AFBDAC72285EE95B00254800 /* ConstraintsAnimationViewController.swift */,
+				AFBDAC782860872400254800 /* LineAnimationsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DDD6FE90DAAEB8BD95CD37AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78C993E6A1AC649E3ED37521 /* Pods-AnimationPolygon.debug.xcconfig */,
+				B7D9F16E7059BB268810F47C /* Pods-AnimationPolygon.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF9874C62848AC34002DC4BE /* Build configuration list for PBXNativeTarget "AnimationPolygon" */;
 			buildPhases = (
+				AECBE4BF7AD09E78DA1566D3 /* [CP] Check Pods Manifest.lock */,
 				AF9874AE2848AC32002DC4BE /* Sources */,
 				AF9874AF2848AC32002DC4BE /* Frameworks */,
 				AF9874B02848AC32002DC4BE /* Resources */,
+				08F23433F45BFD5DE2E79599 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9B95A5284F604F00061404 /* Media.xcassets in Resources */,
+				AFB115A4284E5AA6008B25E5 /* CustomTab.xib in Resources */,
 				AF9874C22848AC34002DC4BE /* LaunchScreen.storyboard in Resources */,
 				AF9874BF2848AC34002DC4BE /* Assets.xcassets in Resources */,
 				AF9874BD2848AC33002DC4BE /* Main.storyboard in Resources */,
@@ -133,14 +287,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08F23433F45BFD5DE2E79599 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationPolygon/Pods-AnimationPolygon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationPolygon/Pods-AnimationPolygon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimationPolygon/Pods-AnimationPolygon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AECBE4BF7AD09E78DA1566D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimationPolygon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF9874AE2848AC32002DC4BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBDAC6F285752A400254800 /* ShieldViewController.swift in Sources */,
+				AFBDAC6528572AC900254800 /* Graph.swift in Sources */,
+				AF9874CB284E5A26002DC4BE /* CustomTab.swift in Sources */,
+				AFBDAC6D2857511D00254800 /* CGSize+Extensions.swift in Sources */,
+				AFB115A8284F3B08008B25E5 /* Extensions.swift in Sources */,
+				AF9B95B72855CA5500061404 /* GlobalFunctions.swift in Sources */,
+				AF6006062856157C00D43DEE /* RatingView.swift in Sources */,
+				AFBDAC69285750D700254800 /* Utils.swift in Sources */,
+				AF9B95B92855CEE200061404 /* LoginViewController.swift in Sources */,
+				AFBDAC7B2860CA4900254800 /* PulsatingButton.swift in Sources */,
+				AFBDAC632856309100254800 /* ClockView.swift in Sources */,
+				AF9B95BD285600B100061404 /* RatingViewController.swift in Sources */,
+				AF9B95BB2855FF7A00061404 /* CakeView.swift in Sources */,
+				AF9B95B32852447400061404 /* BudjetViewController.swift in Sources */,
+				AFBDAC7128576C3500254800 /* PseudoConnection.swift in Sources */,
+				AF60060828561C2D00D43DEE /* Drawing.swift in Sources */,
+				AFB115A6284F383F008B25E5 /* CustomTabViewModel.swift in Sources */,
+				AF9B95A3284F576100061404 /* MockSize.swift in Sources */,
+				AF9B95B52855C91B00061404 /* LoginControl.swift in Sources */,
 				AF9874BA2848AC33002DC4BE /* ViewController.swift in Sources */,
+				AFBDAC792860872400254800 /* LineAnimationsViewController.swift in Sources */,
 				AF9874B62848AC33002DC4BE /* AppDelegate.swift in Sources */,
+				AF60060228560B9000D43DEE /* RoundedCloseButton.swift in Sources */,
+				AFBDAC612856306E00254800 /* ClockViewController.swift in Sources */,
+				AFBDAC6C2857511D00254800 /* CGRect+Extensions.swift in Sources */,
+				AF600604285614B500D43DEE /* CakeViewController.swift in Sources */,
+				AF9B95B12852405F00061404 /* LogoViewController.swift in Sources */,
 				AF9874B82848AC33002DC4BE /* SceneDelegate.swift in Sources */,
+				AF9B95AC28523E4100061404 /* BudjetControl.swift in Sources */,
+				AFBDAC6728574DF300254800 /* ShieldControl.swift in Sources */,
+				AF9B95A928521A9500061404 /* ThermometerView.swift in Sources */,
+				AFEA15C72864A90400FE8A2A /* PulsatingView.swift in Sources */,
+				AFBDAC73285EE95B00254800 /* ConstraintsAnimationViewController.swift in Sources */,
+				AF9B95AF28523F5C00061404 /* ThermometerViewController.swift in Sources */,
+				AFEA15BE28644C6500FE8A2A /* PulsatingDotAnimatedLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +510,7 @@
 		};
 		AF9874C72848AC34002DC4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C993E6A1AC649E3ED37521 /* Pods-AnimationPolygon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +539,7 @@
 		};
 		AF9874C82848AC34002DC4BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7D9F16E7059BB268810F47C /* Pods-AnimationPolygon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

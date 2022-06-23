@@ -1,0 +1,6 @@
+framework module Pods_AnimationPolygon {
+  umbrella header "Pods-AnimationPolygon-umbrella.h"
+
+  export *
+  module * { export * }
+}

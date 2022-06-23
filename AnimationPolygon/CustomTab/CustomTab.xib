@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTab" customModule="AnimationPolygon" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAlef" destination="Nhk-AB-dYe" id="Y3a-Xk-Pv0"/>
+                <outlet property="btnHaaretz" destination="cED-ra-cjv" id="kHP-9A-HQs"/>
+                <outlet property="btnHome" destination="53o-Ct-COc" id="D9o-AX-yAS"/>
+                <outlet property="btnPodcasts" destination="D9B-a2-p0X" id="PMC-EQ-Vod"/>
+                <outlet property="btnTop" destination="Glq-T5-64I" id="S4d-4z-MV0"/>
+                <outlet property="vContentView" destination="K6K-DR-a8D" id="ghd-1w-Ldn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6K-DR-a8D" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhk-AB-dYe">
+                            <rect key="frame" x="174" y="-6" width="67" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" cornerStyle="dynamic">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                </backgroundConfiguration>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-Ct-COc">
+                            <rect key="frame" x="63" y="19" width="24" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icons-home"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9B-a2-p0X">
+                            <rect key="frame" x="133" y="19" width="24" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icons-podcast"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cED-ra-cjv">
+                            <rect key="frame" x="249" y="19" width="24" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icons-discovery"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glq-T5-64I">
+                            <rect key="frame" x="309" y="19" width="24" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icons-most-viewed"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="K6K-DR-a8D" secondAttribute="bottom" id="8Wq-DD-W2m"/>
+                <constraint firstItem="K6K-DR-a8D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="B75-Kx-RFD"/>
+                <constraint firstItem="K6K-DR-a8D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OEQ-JX-JhZ"/>
+                <constraint firstAttribute="trailing" secondItem="K6K-DR-a8D" secondAttribute="trailing" id="PdQ-Bg-lEg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-1307.2463768115942" y="-267.1875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icons-discovery" width="24" height="24"/>
+        <image name="icons-home" width="24" height="24"/>
+        <image name="icons-most-viewed" width="24" height="24"/>
+        <image name="icons-podcast" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
