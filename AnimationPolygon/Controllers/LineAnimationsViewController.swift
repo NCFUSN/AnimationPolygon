@@ -15,8 +15,9 @@ class LineAnimationsViewController: UIViewController {
     @IBOutlet weak private var btn4: RoundedCloseButton!
     @IBOutlet weak private var stv: UIStackView!
     private var shapeLayer: CAShapeLayer?
-    var lastFromPoint: CGPoint = .zero
-    var lastUntilPoint: CGPoint = .zero
+    var fromPoint: CGPoint = .zero
+    var untilPoint: CGPoint = .zero
+    var previousElement: CGPoint = .zero
     
 
     override func viewDidLoad() {
@@ -25,6 +26,12 @@ class LineAnimationsViewController: UIViewController {
         btn2.tag = 2
         btn3.tag = 3
         btn4.tag = 4
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        drawDottedHolder()
+        //didPressButton(sender: btn1)
     }
     
     var btn1UpperSpace: CGRect {
@@ -64,41 +71,128 @@ class LineAnimationsViewController: UIViewController {
             break
         default: rect = .zero
         }
-        if lastFromPoint == .zero {
-            lastFromPoint = CGPoint(x: rect.centre.x - 25.0, y: rect.centre.y)
-        } else if sender.tag == 1 {
-            lastFromPoint = CGPoint(x: btn1UpperSpace.centre.x - 25.0, y: btn1UpperSpace.centre.y)
-            lastUntilPoint = CGPoint(x: btn1UpperSpace.centre.x + 25.0, y: btn1UpperSpace.centre.y)
-            drawLine(fromPoint: lastFromPoint, untilPoint: lastUntilPoint)
-            return
-        }
-        
-        lastUntilPoint = CGPoint(x: rect.centre.x + 25.0, y: rect.centre.y)
-        self.drawLine(fromPoint: lastFromPoint, untilPoint: lastUntilPoint)
+        fromPoint = CGPoint(x: rect.centre.x - btn3.bounds.width/2, y: rect.centre.y)
+        untilPoint = CGPoint(x: rect.centre.x + btn3.bounds.width/2, y: rect.centre.y)
+        self.drawLine(fromPoint: fromPoint, untilPoint: untilPoint)
+        previousElement = untilPoint
     }
     
     private func drawLine(fromPoint: CGPoint, untilPoint: CGPoint) {
-        //self.shapeLayer?.removeFromSuperlayer()
-        if self.shapeLayer == nil {
-            self.shapeLayer?.removeFromSuperlayer()
-            self.shapeLayer = CAShapeLayer()
-            self.view.layer.addSublayer(shapeLayer!)
-        }
+        print("COORD:: FROM: \(fromPoint) UNTIL: \(untilPoint)")
+        self.shapeLayer?.removeFromSuperlayer()
         let path = UIBezierPath()
+        path.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
+        path.addLine(to: CGPoint(x: untilPoint.x, y: untilPoint.y))
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = UIColor.blue.cgColor
+        shapeLayer.fillColor = UIColor.blue.cgColor
+        shapeLayer.lineWidth = 2 * 2.0
+        shapeLayer.lineCap = .round
+        shapeLayer.path = path.cgPath
+        //shapeLayer.strokeStart = 1
+        //shapeLayer.strokeEnd = 0.5
+        
+        
+        self.view.layer.addSublayer(shapeLayer)
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.duration = 0.2
+        animation.fillMode = .both
+        animation.autoreverses = false
+        animation.isCumulative = true
+        shapeLayer.add(animation, forKey: "Animation")
+        self.shapeLayer = shapeLayer
+        
+        /*
+        self.shapeLayer?.removeFromSuperlayer()
+        self.shapeLayer = CAShapeLayer()
+        self.view.layer.addSublayer(shapeLayer!)
+        let path = UIBezierPath()
+        //path.move(to: CGPoint(x: 10, y: 50))
+        //path.addLine(to: CGPoint(x: 200, y: 50))
         path.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
         path.addLine(to: CGPoint(x: untilPoint.x, y: untilPoint.y))
         shapeLayer!.strokeColor = UIColor.blue.cgColor
         shapeLayer!.lineCap = .round
         shapeLayer!.lineWidth = 2 * 2.0
         shapeLayer!.path = path.cgPath
+        //shapeLayer!.strokeStart = 0.4
         
         
-        let animation = CABasicAnimation(keyPath: "strokeStart")
-        animation.fromValue = 0
-        animation.duration = 1
-        //animation.isAdditive = true
-        shapeLayer!.add(animation, forKey: "strokeStart")
+        let startAnimation = CABasicAnimation(keyPath: "strokeStart")
+        //startAnimation.fromValue = 0.5
+        startAnimation.toValue = 0
+        
+        let animation = CAAnimationGroup()
+        animation.animations = [startAnimation]
+        animation.duration = 0.3
+        shapeLayer!.add(animation, forKey: "Animation")
+        lastFromPoint = untilPoint
+         */
+    
+        /*
+         let startAnimation = CABasicAnimation(keyPath: "strokeStart")
+         startAnimation.fromValue = 0
+         startAnimation.toValue = 0.8
+
+         let endAnimation = CABasicAnimation(keyPath: "strokeEnd")
+         endAnimation.fromValue = 0.2
+         endAnimation.toValue = 1.0
+
+         let animation = CAAnimationGroup()
+         animation.animations = [startAnimation, endAnimation]
+         animation.duration = 2
+         shapeLayer.add(animation, forKey: "MyAnimation")
+         */
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    fileprivate func drawDottedHolder() {
+        let layer = CAShapeLayer()
+        let bounds = CGRect(x: 70, y: 50, width: 250, height: 250)
+        layer.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 20, height: 20)).cgPath
+        layer.strokeColor = UIColor.black.cgColor
+        layer.lineDashPattern = [8, 6]
+        layer.fillColor = nil
+        view.layer.addSublayer(layer)
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 2
+        animation.autoreverses = false
+        animation.repeatCount = .nan
+        layer.add(animation, forKey: "line")
+    }
+    
+    
     
     private func animateButtonPressEvent(tag: Int) {
         var btn: RoundedCloseButton
