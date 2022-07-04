@@ -50,8 +50,8 @@ final class PulsatingDotAnimatedLayer: CALayer {
     
     func createOpacityAnimation() -> CAKeyframeAnimation {
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
-        opacityAnimation.duration = animationDuration - (animationDuration / 2)
-        opacityAnimation.keyTimes = [0, 0.3, 1]
+        opacityAnimation.duration = animationDuration //- (animationDuration / 2)
+        opacityAnimation.keyTimes = [0.3, 0.3, 1]
         opacityAnimation.values = [0.4, 0.8, 0]
         return opacityAnimation
     }

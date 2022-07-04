@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-S3-XeG">
-                                <rect key="frame" x="123" y="293" width="168.5" height="310"/>
+                                <rect key="frame" x="123" y="277.5" width="168.5" height="341"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txo-Xn-GDc">
                                         <rect key="frame" x="0.0" y="0.0" width="168.5" height="31"/>
@@ -38,8 +38,16 @@
                                             <segue destination="pvw-ki-hgd" kind="push" id="kJb-Ln-NBq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-Sa-aKz" userLabel="BudjetMeter">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11E-Mt-KDd">
                                         <rect key="frame" x="0.0" y="62" width="168.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Online"/>
+                                        <connections>
+                                            <segue destination="quz-bz-q1c" kind="show" id="Fug-vf-SW1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-Sa-aKz" userLabel="BudjetMeter">
+                                        <rect key="frame" x="0.0" y="93" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="BudjetMeter"/>
                                         <connections>
@@ -47,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9p-Ev-ZrX" userLabel="Login">
-                                        <rect key="frame" x="0.0" y="93" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="124" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
@@ -55,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khF-e9-e3E" userLabel="RatingControl">
-                                        <rect key="frame" x="0.0" y="124" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="155" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="RatingControl"/>
                                         <connections>
@@ -63,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1j-af-SqQ">
-                                        <rect key="frame" x="0.0" y="155" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="186" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="CakeView"/>
                                         <connections>
@@ -71,12 +79,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-il-uLT">
-                                        <rect key="frame" x="0.0" y="186" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="217" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Clock"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-kI-OVn" userLabel="ShieldControl">
-                                        <rect key="frame" x="0.0" y="217" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="248" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="ShieldControl"/>
                                         <connections>
@@ -84,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-Ey-juB" userLabel="Constraints Animation">
-                                        <rect key="frame" x="0.0" y="248" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="279" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Autolayout Animations"/>
                                         <connections>
@@ -92,7 +100,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-NR-o7J">
-                                        <rect key="frame" x="0.0" y="279" width="168.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="310" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Line Animations"/>
                                         <connections>
@@ -607,6 +615,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2G-rW-ZAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3483" y="811"/>
+        </scene>
+        <!--Online View Controller-->
+        <scene sceneID="QJm-QM-0aE">
+            <objects>
+                <viewController id="quz-bz-q1c" customClass="OnlineViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QyE-CQ-Bgh"/>
+                        <viewControllerLayoutGuide type="bottom" id="6r3-CI-Sju"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sd4-f8-nKK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXN-CX-CfP" customClass="OnlineView" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" red="0.6588235294" green="0.0" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="PDb-Ub-SHr"/>
+                                    <constraint firstAttribute="height" constant="50" id="eoz-8J-DKY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bXN-CX-CfP" firstAttribute="centerX" secondItem="Sd4-f8-nKK" secondAttribute="centerX" id="1iu-Ql-e2E"/>
+                            <constraint firstItem="bXN-CX-CfP" firstAttribute="centerY" secondItem="Sd4-f8-nKK" secondAttribute="centerY" id="3Xa-8D-gDT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mur-cK-hdR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3u-kF-dmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4344" y="820"/>
         </scene>
     </scenes>
     <designables>

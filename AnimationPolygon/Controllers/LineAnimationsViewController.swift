@@ -26,11 +26,79 @@ class LineAnimationsViewController: UIViewController {
         btn2.tag = 2
         btn3.tag = 3
         btn4.tag = 4
+        /*
+        let radarLayer = CAShapeLayer()
+        radarLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height);
+            radarLayer.path = UIBezierPath(rect: radarLayer.frame).cgPath
+            radarLayer.fillColor = UIColor.green.cgColor
+        radarLayer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2)
+            radarLayer.cornerRadius = radarLayer.frame.size.width/2
+            radarLayer.masksToBounds = true
+            radarLayer.opacity = 0
+        self.view.layer.addSublayer(radarLayer)
+        let pulseAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
+            pulseAnimation.repeatCount = Float.infinity
+            pulseAnimation.fromValue = 0
+            pulseAnimation.toValue = 0.4
+            pulseAnimation.isRemovedOnCompletion = false
+
+            let fadeOutAnimation = CABasicAnimation(keyPath: "opacity")
+            fadeOutAnimation.duration = 2.5
+        fadeOutAnimation.fromValue = 0
+        fadeOutAnimation.toValue = 0.1
+            fadeOutAnimation.repeatCount = Float.infinity
+
+            let animationGroup = CAAnimationGroup()
+            animationGroup.duration = 2.5
+            animationGroup.animations = [pulseAnimation, fadeOutAnimation]
+            animationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            animationGroup.repeatCount = .greatestFiniteMagnitude
+            animationGroup.fillMode = CAMediaTimingFillMode.forwards
+            animationGroup.isRemovedOnCompletion = false
+        radarLayer.add(animationGroup, forKey: "pulse")
+        
+        */
+        /*
+        let radarLayer = CAShapeLayer()
+        radarLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height);
+            radarLayer.path = UIBezierPath(rect: radarLayer.frame).cgPath
+            radarLayer.fillColor = UIColor.orange.cgColor
+        radarLayer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2)
+            radarLayer.cornerRadius = radarLayer.frame.size.width/2
+            radarLayer.masksToBounds = true
+            radarLayer.opacity = 0
+        self.view.layer.addSublayer(radarLayer)
+
+            let circleLayer = CAShapeLayer()
+            circleLayer.frame = CGRect(x: 0, y: 0, width: 16, height: 16);
+            circleLayer.path = UIBezierPath(rect: circleLayer.frame).cgPath
+            circleLayer.fillColor = UIColor.orange.cgColor
+        circleLayer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2)
+            circleLayer.cornerRadius = circleLayer.frame.size.width/2
+            circleLayer.masksToBounds = true
+        self.view.layer.addSublayer(circleLayer)
+        
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+            scaleAnimation.fromValue = 0
+            scaleAnimation.toValue = 1
+
+            let alphaAnimation = CABasicAnimation(keyPath: "opacity")
+            alphaAnimation.fromValue = 1
+            alphaAnimation.toValue = 0
+
+            let animations = CAAnimationGroup()
+            animations.duration = 0.8
+            animations.repeatCount = Float.infinity
+        animations.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            animations.animations = [scaleAnimation, alphaAnimation]
+
+        radarLayer.add(animations, forKey: "animations")
+        */
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        drawDottedHolder()
+        //drawDottedHolder()
         //didPressButton(sender: btn1)
     }
     
