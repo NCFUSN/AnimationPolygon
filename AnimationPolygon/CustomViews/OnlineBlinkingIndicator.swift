@@ -9,9 +9,13 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class OnlineView: UIView {
+class OnlineBlinkingIndicator: UIView {
     private var pulseLayer = CAShapeLayer()
-    @IBInspectable var themeColour: CGColor = UIColor.red.cgColor
+    @IBInspectable var themeColour: CGColor = UIColor.red.cgColor {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -41,11 +45,12 @@ class OnlineView: UIView {
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
+        setup()
     }
 }
 
 fileprivate class PulseAnimation: CALayer {
-    var animationGroup = CAAnimationGroup()
+    private var animationGroup = CAAnimationGroup()
     var animationDuration: TimeInterval = 1.5
     var radius: CGFloat = 200
     var numebrOfPulse: Float = Float.infinity
@@ -58,7 +63,7 @@ fileprivate class PulseAnimation: CALayer {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(numberOfPulse: Float = Float.infinity, radius: CGFloat, postion: CGPoint){
+    init(numberOfPulse: Float = Float.infinity, radius: CGFloat, postion: CGPoint) {
         super.init()
         self.backgroundColor = UIColor.black.cgColor
         self.contentsScale = UIScreen.main.scale

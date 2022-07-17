@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF2098002872B55E008EB83D /* OnlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2097FF2872B55E008EB83D /* OnlineView.swift */; };
+		AF2098002872B55E008EB83D /* OnlineBlinkingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2097FF2872B55E008EB83D /* OnlineBlinkingIndicator.swift */; };
 		AF2098022872B67F008EB83D /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2098012872B67F008EB83D /* OnlineViewController.swift */; };
 		AF60060228560B9000D43DEE /* RoundedCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60060128560B9000D43DEE /* RoundedCloseButton.swift */; };
 		AF600604285614B500D43DEE /* CakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF600603285614B500D43DEE /* CakeViewController.swift */; };
@@ -55,7 +55,7 @@
 /* Begin PBXFileReference section */
 		37929977711E42F4C19F08D9 /* Pods_AnimationPolygon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationPolygon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C993E6A1AC649E3ED37521 /* Pods-AnimationPolygon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationPolygon.debug.xcconfig"; path = "Target Support Files/Pods-AnimationPolygon/Pods-AnimationPolygon.debug.xcconfig"; sourceTree = "<group>"; };
-		AF2097FF2872B55E008EB83D /* OnlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineView.swift; sourceTree = "<group>"; };
+		AF2097FF2872B55E008EB83D /* OnlineBlinkingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineBlinkingIndicator.swift; sourceTree = "<group>"; };
 		AF2098012872B67F008EB83D /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
 		AF60060128560B9000D43DEE /* RoundedCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCloseButton.swift; sourceTree = "<group>"; };
 		AF600603285614B500D43DEE /* CakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				AFBDAC6628574DF300254800 /* ShieldControl.swift */,
 				AFBDAC7A2860CA4900254800 /* PulsatingButton.swift */,
 				AFEA15C62864A90400FE8A2A /* PulsatingView.swift */,
-				AF2097FF2872B55E008EB83D /* OnlineView.swift */,
+				AF2097FF2872B55E008EB83D /* OnlineBlinkingIndicator.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 				AFBDAC6F285752A400254800 /* ShieldViewController.swift in Sources */,
 				AFBDAC6528572AC900254800 /* Graph.swift in Sources */,
 				AF9874CB284E5A26002DC4BE /* CustomTab.swift in Sources */,
-				AF2098002872B55E008EB83D /* OnlineView.swift in Sources */,
+				AF2098002872B55E008EB83D /* OnlineBlinkingIndicator.swift in Sources */,
 				AFBDAC6D2857511D00254800 /* CGSize+Extensions.swift in Sources */,
 				AFB115A8284F3B08008B25E5 /* Extensions.swift in Sources */,
 				AF9B95B72855CA5500061404 /* GlobalFunctions.swift in Sources */,
