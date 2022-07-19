@@ -14,11 +14,12 @@ class LineAnimationsViewController: UIViewController {
     @IBOutlet weak private var btnCentral: RoundedCloseButton!
     @IBOutlet weak private var btn3: UIButton!
     @IBOutlet weak private var btn4: UIButton!
-    @IBOutlet weak private var stv: UIStackView!
-    private var shapeLayer: CAShapeLayer?
-    var fromPoint: CGPoint = .zero
-    var untilPoint: CGPoint = .zero
-    var previousElement: CGPoint = .zero
+    
+    var line = UIView()
+    var trailingConstraint: NSLayoutConstraint?
+    var leadingConstraint: NSLayoutConstraint?
+    var bottomConstraint: NSLayoutConstraint?
+    private var latestElement: UIButton?
     
 
     override func viewDidLoad() {
@@ -27,189 +28,86 @@ class LineAnimationsViewController: UIViewController {
         btn2.tag = 2
         btn3.tag = 3
         btn4.tag = 4
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    var btn1UpperSpace: CGRect {
-        let stvFrame = stv.arrangedSubviews[0].frame
-        let rect = CGRect(x: stvFrame.midX, y: stv.frame.midY - stvFrame.height, width: btn4.bounds.width, height: stv.frame.height / 5)
-        return rect
-    }
-    
-    var btn2UpperSpace: CGRect {
-        let stvFrame = stv.arrangedSubviews[1].frame
-        let rect = CGRect(x: stvFrame.midX, y: stv.frame.midY - stvFrame.height, width: btn4.bounds.width, height: stv.frame.height / 5)
-        return rect
-    }
-    
-    var btn3UpperSpace: CGRect {
-        let stvFrame = stv.arrangedSubviews[3].frame
-        let rect = CGRect(x: stvFrame.midX, y: stv.frame.midY - stvFrame.height, width: btn4.bounds.width, height: stv.frame.height / 5)
-        return rect
-    }
-    var btn4UpperSpace: CGRect {
-        let stvFrame = stv.arrangedSubviews[4].frame
-        let rect = CGRect(x: stvFrame.midX, y: stv.frame.midY - stvFrame.height, width: btn4.bounds.width, height: stv.frame.height / 5)
-        return rect
+        line.usesAutoLayout = true
+        line.backgroundColor = .systemBlue
+        line.layer.cornerRadius = 3.0
+        line.layer.masksToBounds = true
+        self.view.addSubview(line)
+        btnCentral.bringSubviewToFront(line)
+        drawInitialLine()
     }
     
     @IBAction func didPressButton(sender: UIButton) {
-        
-        var rect: CGRect = .zero
         switch sender.tag {
-        case 1: rect = btn1UpperSpace
-            break
-        case 2: rect = btn2UpperSpace
-            break
-        case 3: rect = btn3UpperSpace
-            break
-        case 4: rect = btn4UpperSpace
-            break
-        default: rect = .zero
+        case 1:
+            drawTo(element: btn1)
+        case 2:
+            drawTo(element: btn2)
+        case 3:
+            drawTo(element: btn3)
+        case 4:
+            drawTo(element: btn4)
+        default:
+            return
         }
-        fromPoint = CGPoint(x: rect.centre.x - btn3.bounds.width/2, y: rect.centre.y)
-        untilPoint = CGPoint(x: rect.centre.x + btn3.bounds.width/2, y: rect.centre.y)
-        self.drawLine(fromPoint: fromPoint, untilPoint: untilPoint)
     }
     
-    private func drawLine(fromPoint: CGPoint, untilPoint: CGPoint) {
-        print("COORD:: FROM: \(fromPoint) UNTIL: \(untilPoint)")
-        //self.shapeLayer?.removeFromSuperlayer()
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
-        path.addLine(to: CGPoint(x: untilPoint.x, y: untilPoint.y))
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.blue.cgColor
-        shapeLayer.fillColor = UIColor.blue.cgColor
-        shapeLayer.lineWidth = 2 * 2.0
-        shapeLayer.lineCap = .round
-        shapeLayer.path = path.cgPath
-        //shapeLayer.strokeStart = 1
-        //shapeLayer.strokeEnd = 0.5
+    private func drawInitialLine() {
+        line.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
+        trailingConstraint = NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: btn1, attribute: .trailing, multiplier: 1, constant: 0)
+        leadingConstraint = NSLayoutConstraint(item: line, attribute: .leading, relatedBy: .equal, toItem: btn1, attribute: .leading, multiplier: 1, constant: 0)
+        bottomConstraint = NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: btn1, attribute: .top, multiplier: 1, constant: 14)
         
-        
-        self.view.layer.addSublayer(shapeLayer)
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.fromValue = 0
-        animation.duration = 0.2
-        animation.fillMode = .both
-        animation.autoreverses = false
-        animation.isCumulative = true
-        shapeLayer.add(animation, forKey: "Animation")
-        self.shapeLayer = shapeLayer
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    fileprivate func drawDottedHolder() {
-        let layer = CAShapeLayer()
-        let bounds = CGRect(x: 70, y: 50, width: 250, height: 250)
-        layer.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 20, height: 20)).cgPath
-        layer.strokeColor = UIColor.black.cgColor
-        layer.lineDashPattern = [8, 6]
-        layer.fillColor = nil
-        view.layer.addSublayer(layer)
-        
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.duration = 2
-        animation.autoreverses = false
-        animation.repeatCount = .nan
-        layer.add(animation, forKey: "line")
-    }
-    
-    
-    
-    private func animateButtonPressEvent(tag: Int) {
-        var btn: UIButton
-        switch tag {
-        case 1: btn = btn1
-            break
-        case 2: btn = btn2
-            break
-        case 3: btn = btn3
-            break
-        case 4: btn = btn4
-            break
-        default: break
+        UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn) { [unowned self] in
+            trailingConstraint!.isActive = true
+            bottomConstraint?.isActive = true
+            leadingConstraint!.isActive = true
+            line.layoutIfNeeded()
         }
+        latestElement = btn1
+    }
+    
+    private func drawTo(element: UIButton) {
+        if isRequestedElementAfterTheLatestElement(element) {
+            bindTrailingConstraints(element)
+        } else {
+            bindLeadingConstraints(element)
+        }
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [unowned self] in
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            self.springDumpLine(element: element)
+        }
+    }
+    
+    private func springDumpLine(element: UIButton) {
+        if isRequestedElementAfterTheLatestElement(element) {
+            bindLeadingConstraints(element)
+        } else {
+            bindTrailingConstraints(element)
+        }
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [unowned self] in
+            self.view.layoutIfNeeded()
+            latestElement = element
+        }
+    }
+    
+    private func isRequestedElementAfterTheLatestElement(_ element: UIButton) -> Bool {
+        if let latestElement = latestElement {
+            return element.tag > latestElement.tag
+        }
+        return false
+    }
+    
+    private func bindTrailingConstraints(_ element: UIButton) {
+        trailingConstraint?.isActive = false
+        trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
+        trailingConstraint!.isActive = true
+    }
+    
+    private func bindLeadingConstraints(_ element: UIButton) {
+        leadingConstraint?.isActive = false
+        leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
+        leadingConstraint?.isActive = true
     }
 }
-
-
-/*
- 
- self.shapeLayer?.removeFromSuperlayer()
- self.shapeLayer = CAShapeLayer()
- let path = UIBezierPath()
- path.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
- path.addLine(to: CGPoint(x: untilPoint.x, y: untilPoint.y))
- shapeLayer!.strokeColor = UIColor.blue.cgColor
- shapeLayer!.lineCap = .round
- shapeLayer!.lineWidth = 2 * 2.0
- shapeLayer!.path = path.cgPath
- self.view.layer.addSublayer(shapeLayer!)
- let animation = CABasicAnimation(keyPath: "strokeStart")
- animation.fromValue = 0
- animation.duration = 1
- animation.isAdditive = true
- shapeLayer!.add(animation, forKey: "strokeStart")
- */
-
-/*
- 
- let path = UIBezierPath()
- path.move(to: CGPoint(x: 10, y: 130))
- path.addCurve(to: CGPoint(x: 210, y: 200), controlPoint1: CGPoint(x: 50, y: -100), controlPoint2: CGPoint(x: 100, y: 350))
- 
- let shapeLayer = CAShapeLayer()
- shapeLayer.fillColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).cgColor
- shapeLayer.strokeColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).cgColor
- shapeLayer.lineWidth = 5
- shapeLayer.path = path.cgPath
- shapeLayer.strokeStart = 0.8
-
- let startAnimation = CABasicAnimation(keyPath: "strokeStart")
- startAnimation.fromValue = 0
- startAnimation.toValue = 0.8
-
- let endAnimation = CABasicAnimation(keyPath: "strokeEnd")
- endAnimation.fromValue = 0.2
- endAnimation.toValue = 1.0
-
- let animation = CAAnimationGroup()
- animation.animations = [startAnimation, endAnimation]
- animation.duration = 2
- shapeLayer.add(animation, forKey: "MyAnimation")
- 
- */
