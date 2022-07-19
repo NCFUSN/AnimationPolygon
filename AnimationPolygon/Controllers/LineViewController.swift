@@ -61,13 +61,9 @@ class LineViewController: UIViewController {
     
     private func drawTo(element: RoundedCloseButton) {
         if isRequestedElementAfterTheLatestElement(element) {
-            trailingConstraint?.isActive = false
-            trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
-            trailingConstraint!.isActive = true
+            bindTrailingConstraints(element)
         } else {
-            leadingConstraint?.isActive = false
-            leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
-            leadingConstraint!.isActive = true
+            bindLeadingConstraints(element)
         }
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [unowned self] in
             self.view.layoutIfNeeded()
@@ -78,13 +74,9 @@ class LineViewController: UIViewController {
     
     private func springDumpLine(element: RoundedCloseButton) {
         if isRequestedElementAfterTheLatestElement(element) {
-            leadingConstraint?.isActive = false
-            leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
-            leadingConstraint?.isActive = true
+            bindLeadingConstraints(element)
         } else {
-            trailingConstraint?.isActive = false
-            trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
-            trailingConstraint!.isActive = true
+            bindTrailingConstraints(element)
         }
         UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [unowned self] in
             self.view.layoutIfNeeded()
@@ -97,5 +89,17 @@ class LineViewController: UIViewController {
             return element.tag > latestElement.tag
         }
         return false
+    }
+    
+    private func bindTrailingConstraints(_ element: RoundedCloseButton) {
+        trailingConstraint?.isActive = false
+        trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
+        trailingConstraint!.isActive = true
+    }
+    
+    private func bindLeadingConstraints(_ element: RoundedCloseButton) {
+        leadingConstraint?.isActive = false
+        leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
+        leadingConstraint?.isActive = true
     }
 }
