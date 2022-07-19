@@ -15,6 +15,8 @@ class LineAnimationsViewController: UIViewController {
     @IBOutlet weak private var btn3: UIButton!
     @IBOutlet weak private var btn4: UIButton!
     
+    @IBOutlet weak private var stackView: UIStackView!
+    
     var line = UIView()
     var trailingConstraint: NSLayoutConstraint?
     var leadingConstraint: NSLayoutConstraint?
@@ -33,8 +35,8 @@ class LineAnimationsViewController: UIViewController {
         line.layer.cornerRadius = 3.0
         line.layer.masksToBounds = true
         self.view.addSubview(line)
-        btnCentral.bringSubviewToFront(line)
         drawInitialLine()
+        stackView.bringSubviewToFront(line)
     }
     
     @IBAction func didPressButton(sender: UIButton) {
@@ -73,7 +75,7 @@ class LineAnimationsViewController: UIViewController {
         } else {
             bindLeadingConstraints(element)
         }
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [unowned self] in
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [unowned self] in
             self.view.layoutIfNeeded()
         } completion: { _ in
             self.springDumpLine(element: element)
@@ -86,7 +88,7 @@ class LineAnimationsViewController: UIViewController {
         } else {
             bindTrailingConstraints(element)
         }
-        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [unowned self] in
+        UIView.animate(withDuration: 0.2, delay: 0.1, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [unowned self] in
             self.view.layoutIfNeeded()
             latestElement = element
         }

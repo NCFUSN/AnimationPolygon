@@ -768,6 +768,7 @@
                         <outlet property="btn3" destination="RC6-3B-AGX" id="seP-9V-bMH"/>
                         <outlet property="btn4" destination="wqv-4N-51Q" id="WwX-eg-tqP"/>
                         <outlet property="btnCentral" destination="8is-dJ-nnG" id="qLA-gb-0dk"/>
+                        <outlet property="stackView" destination="YL4-yM-ote" id="HyF-UR-LjZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2G-rW-ZAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
