@@ -22,12 +22,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-S3-XeG">
                                 <rect key="frame" x="123" y="262" width="168.5" height="372"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09q-ER-M84" userLabel="Tabbar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09q-ER-M84" userLabel="Line Drawing">
                                         <rect key="frame" x="0.0" y="0.0" width="168.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Line Drawing"/>
                                         <connections>
-                                            <segue destination="eHh-Tb-KC8" kind="show" id="jNx-Bg-QBS"/>
+                                            <segue destination="SY9-rX-VJg" kind="show" id="v5N-Zw-4DJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txo-Xn-GDc">
@@ -404,6 +404,71 @@
             </objects>
             <point key="canvasLocation" x="1509" y="800"/>
         </scene>
+        <!--Line View Controller-->
+        <scene sceneID="NSf-So-sWh">
+            <objects>
+                <viewController id="SY9-rX-VJg" customClass="LineViewController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ecw-mi-MHJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gat-mS-C8L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6mn-f2-cR7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLz-cg-qHA" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LK5-pe-YXj"/>
+                                    <constraint firstAttribute="width" constant="50" id="xPe-Ql-snh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                        <color key="value" red="0.87450980389999999" green="0.12941176469999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnFiredWithSender:" destination="SY9-rX-VJg" eventType="touchUpInside" id="iwm-Q7-7Yl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyZ-4W-V40" customClass="RoundedCloseButton" customModule="AnimationPolygon" customModuleProvider="target">
+                                <rect key="frame" x="282" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="OFg-5a-H3b"/>
+                                    <constraint firstAttribute="height" constant="50" id="sfY-Ao-Sjq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColour">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnFiredWithSender:" destination="SY9-rX-VJg" eventType="touchUpInside" id="rG3-rr-KGH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HLz-cg-qHA" firstAttribute="centerY" secondItem="6mn-f2-cR7" secondAttribute="centerY" id="8wQ-x0-Kx2"/>
+                            <constraint firstItem="uyZ-4W-V40" firstAttribute="leading" secondItem="HLz-cg-qHA" secondAttribute="leading" constant="100" id="OS5-MS-AR0"/>
+                            <constraint firstItem="HLz-cg-qHA" firstAttribute="centerX" secondItem="6mn-f2-cR7" secondAttribute="centerX" id="UKl-cn-Y6a"/>
+                            <constraint firstItem="uyZ-4W-V40" firstAttribute="centerY" secondItem="6mn-f2-cR7" secondAttribute="centerY" id="dp6-F4-fg2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ezV-LV-EGY"/>
+                    <connections>
+                        <outlet property="btn" destination="HLz-cg-qHA" id="gwJ-7J-tCf"/>
+                        <outlet property="btn2" destination="uyZ-4W-V40" id="s0n-ox-5Gp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abp-ju-0Us" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="1678"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="i0c-3n-0in">
             <objects>
@@ -441,25 +506,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIJ-54-Lam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2214" y="1237"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="cVW-xU-05t">
-            <objects>
-                <tabBarController id="eHh-Tb-KC8" customClass="TabBarController" customModule="AnimationPolygon" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Ble-od-HD3"/>
-                    <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="VGz-4n-CJo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="C6o-6Q-cPk" kind="relationship" relationship="viewControllers" id="Bo4-Yt-t8b"/>
-                        <segue destination="eej-L1-zJq" kind="relationship" relationship="viewControllers" id="WTd-QO-l8g"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="067-vF-f35" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1324" y="1541"/>
         </scene>
         <!--Constraints Animation View Controller-->
         <scene sceneID="djs-nW-1de">

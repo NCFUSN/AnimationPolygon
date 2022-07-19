@@ -10,6 +10,7 @@
 		AF2098002872B55E008EB83D /* OnlineBlinkingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2097FF2872B55E008EB83D /* OnlineBlinkingIndicator.swift */; };
 		AF2098022872B67F008EB83D /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2098012872B67F008EB83D /* OnlineViewController.swift */; };
 		AF5BABDF28854A5600AA6FB4 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BABDE28854A5600AA6FB4 /* Tabbar.swift */; };
+		AF5BABE32885715400AA6FB4 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BABE22885715400AA6FB4 /* LineViewController.swift */; };
 		AF60060228560B9000D43DEE /* RoundedCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60060128560B9000D43DEE /* RoundedCloseButton.swift */; };
 		AF600604285614B500D43DEE /* CakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF600603285614B500D43DEE /* CakeViewController.swift */; };
 		AF6006062856157C00D43DEE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6006052856157C00D43DEE /* RatingView.swift */; };
@@ -59,6 +60,7 @@
 		AF2097FF2872B55E008EB83D /* OnlineBlinkingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineBlinkingIndicator.swift; sourceTree = "<group>"; };
 		AF2098012872B67F008EB83D /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
 		AF5BABDE28854A5600AA6FB4 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		AF5BABE22885715400AA6FB4 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
 		AF60060128560B9000D43DEE /* RoundedCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCloseButton.swift; sourceTree = "<group>"; };
 		AF600603285614B500D43DEE /* CakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeViewController.swift; sourceTree = "<group>"; };
 		AF6006052856157C00D43DEE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				AFBDAC72285EE95B00254800 /* ConstraintsAnimationViewController.swift */,
 				AFBDAC782860872400254800 /* LineAnimationsViewController.swift */,
 				AF2098012872B67F008EB83D /* OnlineViewController.swift */,
+				AF5BABE22885715400AA6FB4 /* LineViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				AF60060828561C2D00D43DEE /* Drawing.swift in Sources */,
 				AFB115A6284F383F008B25E5 /* CustomTabViewModel.swift in Sources */,
 				AF2098022872B67F008EB83D /* OnlineViewController.swift in Sources */,
+				AF5BABE32885715400AA6FB4 /* LineViewController.swift in Sources */,
 				AF9B95A3284F576100061404 /* MockSize.swift in Sources */,
 				AF9B95B52855C91B00061404 /* LoginControl.swift in Sources */,
 				AF9874BA2848AC33002DC4BE /* ViewController.swift in Sources */,
