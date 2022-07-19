@@ -9,17 +9,18 @@ import Foundation
 import UIKit
 
 class LineViewController: UIViewController {
-    @IBOutlet private var btn: RoundedCloseButton!
+    @IBOutlet private var btn0: RoundedCloseButton!
+    @IBOutlet private var btn1: RoundedCloseButton!
     @IBOutlet private var btn2: RoundedCloseButton!
+    @IBOutlet private var btn3: RoundedCloseButton!
     var line = UIView()
     var trailingConstraint: NSLayoutConstraint?
     var leadingConstraint: NSLayoutConstraint?
     var bottomConstraint: NSLayoutConstraint?
+    private var latestElement: RoundedCloseButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btn.tag = 0
-        btn2.tag = 1
         line.usesAutoLayout = true
         line.backgroundColor = .red
         line.layer.cornerRadius = 3.0
@@ -31,9 +32,13 @@ class LineViewController: UIViewController {
     @IBAction private func btnFired(sender: RoundedCloseButton) {
         switch sender.tag {
         case 0:
-            drawTo(element: btn)
+            drawTo(element: btn0)
         case 1:
+            drawTo(element: btn1)
+        case 2:
             drawTo(element: btn2)
+        case 3:
+            drawTo(element: btn3)
         default:
             return
         }
@@ -41,9 +46,9 @@ class LineViewController: UIViewController {
     
     private func drawInitialLine() {
         line.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
-        trailingConstraint = NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: btn, attribute: .trailing, multiplier: 1, constant: 0)
-        leadingConstraint = NSLayoutConstraint(item: line, attribute: .leading, relatedBy: .equal, toItem: btn, attribute: .leading, multiplier: 1, constant: 0)
-        bottomConstraint = NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: btn, attribute: .top, multiplier: 1, constant: -6)
+        trailingConstraint = NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: btn0, attribute: .trailing, multiplier: 1, constant: 0)
+        leadingConstraint = NSLayoutConstraint(item: line, attribute: .leading, relatedBy: .equal, toItem: btn0, attribute: .leading, multiplier: 1, constant: 0)
+        bottomConstraint = NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: btn0, attribute: .top, multiplier: 1, constant: -6)
         
         UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn) { [unowned self] in
             trailingConstraint!.isActive = true
@@ -53,16 +58,13 @@ class LineViewController: UIViewController {
         }
     }
     
-    
-    
     private func drawTo(element: RoundedCloseButton) {
-        
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [unowned self] in
             trailingConstraint?.isActive = false
             trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
             trailingConstraint!.isActive = true
             self.view.layoutIfNeeded()
-        } completion: { res in
+        } completion: { _ in
             self.springDumpLine(element: element)
         }
     }
@@ -73,6 +75,14 @@ class LineViewController: UIViewController {
             leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
             leadingConstraint?.isActive = true
             self.view.layoutIfNeeded()
+            latestElement = element
         }
+    }
+    
+    private func isRequestedElementAfterTheLatestElement(_ element: RoundedCloseButton) -> Bool {
+        if let latestElement = latestElement {
+            return element.frame.minX > latestElement.frame.minX
+        }
+        return false
     }
 }
