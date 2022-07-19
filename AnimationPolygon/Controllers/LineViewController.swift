@@ -60,10 +60,16 @@ class LineViewController: UIViewController {
     }
     
     private func drawTo(element: RoundedCloseButton) {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [unowned self] in
+        if isRequestedElementAfterTheLatestElement(element) {
             trailingConstraint?.isActive = false
             trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
             trailingConstraint!.isActive = true
+        } else {
+            leadingConstraint?.isActive = false
+            leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
+            leadingConstraint!.isActive = true
+        }
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [unowned self] in
             self.view.layoutIfNeeded()
         } completion: { _ in
             self.springDumpLine(element: element)
@@ -71,10 +77,16 @@ class LineViewController: UIViewController {
     }
     
     private func springDumpLine(element: RoundedCloseButton) {
-        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [unowned self] in
+        if isRequestedElementAfterTheLatestElement(element) {
             leadingConstraint?.isActive = false
             leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
             leadingConstraint?.isActive = true
+        } else {
+            trailingConstraint?.isActive = false
+            trailingConstraint = line.trailingAnchor.constraint(equalTo: element.trailingAnchor)
+            trailingConstraint!.isActive = true
+        }
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [unowned self] in
             self.view.layoutIfNeeded()
             latestElement = element
         }
