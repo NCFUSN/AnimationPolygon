@@ -56,6 +56,7 @@ class LineViewController: UIViewController {
             leadingConstraint!.isActive = true
             line.layoutIfNeeded()
         }
+        latestElement = btn0
     }
     
     private func drawTo(element: RoundedCloseButton) {
@@ -81,7 +82,7 @@ class LineViewController: UIViewController {
     
     private func isRequestedElementAfterTheLatestElement(_ element: RoundedCloseButton) -> Bool {
         if let latestElement = latestElement {
-            return element.frame.minX > latestElement.frame.minX
+            return element.tag > latestElement.tag
         }
         return false
     }
