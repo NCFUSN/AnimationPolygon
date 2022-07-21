@@ -110,6 +110,6 @@ class LineAnimationsViewController: UIViewController {
     private func bindLeadingConstraints(_ element: UIButton) {
         leadingConstraint?.isActive = false
         leadingConstraint = line.leadingAnchor.constraint(equalTo: element.leadingAnchor)
-        leadingConstraint?.isActive = true
+        leadingConstraint!.isActive = true
     }
 }
