@@ -133,8 +133,4 @@ class ConstraintsAnimationViewController: UIViewController {
                               completion: { _ in containerView.removeFromSuperview()})
         }
     }
-    
-    private func delay(seconds: TimeInterval, execute: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: execute)
-    }
 }

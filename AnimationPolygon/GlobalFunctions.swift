@@ -15,3 +15,7 @@ func with<V>(_ value: V, _ mutate: ((_ v: inout V) -> Void)) -> V {
     mutate(&mutableValue)
     return mutableValue
 }
+
+func delay(seconds: TimeInterval, execute: @escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: execute)
+}
